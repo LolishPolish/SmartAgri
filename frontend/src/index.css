@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-primary: #059669;
+    --color-primary-dark: #047857;
+    --color-secondary: #0d9488;
+    --color-accent: #f59e0b;
+    --color-danger: #ef4444;
+    --color-success: #10b981;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-white rounded-xl shadow-sm border border-gray-200 p-6;
+  }
+  .sidebar-link {
+    @apply flex items-center gap-3 px-4 py-3 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors;
+  }
+  .sidebar-link.active {
+    @apply bg-emerald-50 text-emerald-700 font-medium;
+  }
+  .stat-card {
+    @apply bg-white rounded-xl shadow-sm border border-gray-200 p-5;
+  }
+  .btn-primary {
+    @apply bg-emerald-600 text-white px-4 py-2 rounded-lg hover:bg-emerald-700 transition-colors font-medium;
+  }
+  .btn-secondary {
+    @apply bg-gray-100 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-200 transition-colors font-medium;
+  }
+  .input-field {
+    @apply w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent outline-none;
+  }
+}
